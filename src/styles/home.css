@@ -1,0 +1,186 @@
+/* HERO SECTION */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: radial-gradient(circle at center, #001f2f, #000000 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Subtle neon glow background animation */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #00f0ff;
+  filter: blur(200px);
+  opacity: 0.2;
+  animation: pulse 6s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: #00f0ff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px #00f0ff;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #cccccc;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* BUTTONS */
+
+.btn-primary {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #00f0ff, #0077ff);
+  border: none;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00f0ff;
+}
+
+.btn-secondary {
+  padding: 12px 25px;
+  border: 2px solid #00f0ff;
+  border-radius: 30px;
+  color: #00f0ff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #00f0ff;
+  color: black;
+  box-shadow: 0 0 20px #00f0ff;
+}
+
+/* Scroll indicator */
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  font-size: 2rem;
+  color: #00f0ff;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+
+.dance-section {
+  padding: 80px 20px;
+  background: #000;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #00f0ff;
+  margin-bottom: 50px;
+}
+
+.dance-card {
+  background: linear-gradient(135deg, #001f2f, #000);
+  padding: 50px;
+  border-radius: 20px;
+  border: 1px solid #00f0ff;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.artists-section {
+  padding: 80px 20px;
+  background: radial-gradient(circle, #001f2f, #000);
+  text-align: center;
+}
+
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.artist-card {
+  padding: 30px;
+  border-radius: 50%;
+  background: #000;
+  border: 2px solid #00f0ff;
+  transition: 0.4s ease;
+}
+
+.artist-card:hover {
+  box-shadow: 0 0 30px #00f0ff;
+  transform: scale(1.05);
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background: black;
+  box-shadow: 0 0 15px #00f0ff;
+}
+
+.navbar a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  color: #00f0ff;
+}
