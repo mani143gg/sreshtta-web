@@ -5,8 +5,24 @@ import About from './pages/About'
 import Courses from './pages/Courses'
 import Contact from './pages/Contact'
 import Navbar from './components/Navbar'
+import Loader from './components/Loader'
+import { useState, useEffect } from 'react'
 
 function App() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (loading) {
+    return <Loader />
+  }
+
   return (
     <div>
       <Navbar />
