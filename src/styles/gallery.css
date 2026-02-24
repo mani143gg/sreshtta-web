@@ -1,0 +1,84 @@
+.gallery-page {
+  padding: 100px 20px;
+  background: #000;
+  min-height: 100vh;
+  color: white;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
+  margin-bottom: 40px;
+}
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.gallery-filters button {
+  background: transparent;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery-filters button.active,
+.gallery-filters button:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-card {
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.4s;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 3px solid #00ffff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #00ffff;
+}

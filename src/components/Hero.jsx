@@ -1,10 +1,22 @@
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import "../styles/home.css"
+import { useEffect, useState } from "react"
 
 function Hero() {
+  const [offsetY, setOffsetY] = useState(0)
+
+  useEffect(() => {
+  const handleScroll = () => {
+    setOffsetY(window.scrollY)
+  }
+  window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+
   return (
-    <section className="hero">
+    <section className="hero" style={{ transform: `translateY(${offsetY * 0.3}px)` }}>
       <div className="hero-overlay"></div>
 
       <motion.div
