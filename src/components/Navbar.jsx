@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 
 function Navbar() {
     const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false)
+
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
@@ -12,15 +14,20 @@ function Navbar() {
     }, []);
 
     return(
-        <nav className={scrolled ? "navbar scrolled" : "navbar"}>
-            <h1 className="logo">Sreshtta</h1>
-            <div>
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/courses">Courses</Link>
-                <Link to="/gallery">Gallery</Link>
-                <Link to="/contact">Contact</Link>
-            </div>
+       <nav className={scrolled ? "navbar scrolled" : "navbar"}>
+        <h1 className="logo">Sreshtta</h1>
+
+        <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+            <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+            <Link to="/courses" onClick={() => setMenuOpen(false)}>Courses</Link>
+            <Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+        </div>
+
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            ☰
+        </div>
         </nav>
     )
 }
