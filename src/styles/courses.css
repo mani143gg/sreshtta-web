@@ -43,17 +43,23 @@
 
 .course-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 320px));
+  justify-content: center;
+  gap: 40px;
 }
 
 .course-card {
+  width: 320px;
+  max-width: 100%;
+  height: 480px; /* fixed height */
   background: rgba(0, 255, 255, 0.08);
   border: 1px solid rgba(0, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 20px;
   transition: 0.4s;
+  display: flex;
+  flex-direction: column;
 }
 
 .course-card:hover {
@@ -63,7 +69,7 @@
 
 .course-card img {
   width: 100%;
-  height: 180px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
@@ -76,4 +82,27 @@
   margin-top: 10px;
   font-size: 0.9rem;
   color: #aaa;
+}
+
+.course-card img {
+  filter: brightness(0.9) contrast(1.1);
+  transition: 0.4s;
+}
+
+.course-card:hover img {
+  filter: brightness(1.2) drop-shadow(0 0 15px cyan);
+}
+
+.course-card h3 {
+  margin-bottom: 8px;
+}
+
+.course-card p {
+  flex-grow: 1; /* pushes details to bottom */
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.details {
+  margin-top: auto;
 }

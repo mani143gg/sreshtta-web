@@ -7,6 +7,7 @@ import Contact from './pages/Contact'
 import Navbar from './components/Navbar'
 import Loader from './components/Loader'
 import { useState, useEffect } from 'react'
+import Footer from "./components/Footer"
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -33,6 +34,7 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
