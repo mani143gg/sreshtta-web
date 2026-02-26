@@ -25,21 +25,21 @@ function DanceForms() {
       >
         {danceForms.map((dance) => (
           <SwiperSlide key={dance.id}>
-            <div className="dance-card glass-card">
-              
-              <div className="dance-image">
-                <img src={dance.image} alt={dance.name} />
-              </div>
+            <div className="dance-card">
 
-              <div className="dance-content">
-                <h3>{dance.name}</h3>
-                <span className="dance-type">{dance.type}</span>
+              <img className="dance-bg" src={dance.image} alt={dance.name} />
 
-                <p>{dance.description}</p>
+              <div className="dance-overlay">
+                <div className="dance-glass">
+                  <h3>{dance.name}</h3>
+                  <span className="dance-type">{dance.type}</span>
 
-                <div className="dance-meta">
-                  <span>Level: {dance.level}</span>
-                  <span>Duration: {dance.duration}</span>
+                  <p>{dance.description}</p>
+
+                  <div className="dance-meta">
+                    <span>Level: {dance.level}</span>
+                    <span>{dance.duration}</span>
+                  </div>
                 </div>
               </div>
 
