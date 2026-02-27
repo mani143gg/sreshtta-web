@@ -49,7 +49,7 @@ function Footer() {
         {/* Column 4 */}
         <div className="footer-col">
           <h3>Contact Us</h3>
-          <p>📍 Kochi, Kerala, India</p>
+          <p>📍 Trivandrum, Kerala, India</p>
           <p>📞 +91 98765 43210</p>
           <p>📧 sreshttaperformingarts@gmail.com</p>
         </div>

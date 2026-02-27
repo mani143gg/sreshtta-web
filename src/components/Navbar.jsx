@@ -15,7 +15,7 @@ function Navbar() {
 
     return(
        <nav className={scrolled ? "navbar scrolled" : "navbar"}>
-        <h1 className="logo">Sreshtta</h1>
+        <h1 className="logo">Sreshtta Performing Arts</h1>
 
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
             <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
