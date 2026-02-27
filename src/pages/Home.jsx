@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
 import DanceForms from "../components/DanceForms"
 import Artists from "../components/Artists"
-
+import Stats from "../components/Stats"
 
 function Home() {
     return(
@@ -9,6 +9,7 @@ function Home() {
             <Hero />
             <DanceForms />
             <Artists />
+            <Stats />
         </div>
     )
 }

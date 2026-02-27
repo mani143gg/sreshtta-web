@@ -1,4 +1,7 @@
 import { motion } from "framer-motion"
+import Teachers from "../components/Teachers"
+import Awards from "../components/Awards"
+import Timeline from "../components/Timeline"
 import "../styles/about.css"
 
 function About() {
@@ -113,6 +116,10 @@ function About() {
         <h2>Begin Your Artistic Journey Today</h2>
         <p>Join Sreshtta Performing Arts and discover your true potential.</p>
       </section>
+
+      <Teachers />
+      <Awards />
+      <Timeline />
 
     </div>
   )

@@ -6,8 +6,14 @@ export const danceForms = [
     level: "Beginner to Advanced",
     duration: "6 Months",
     description:
-      "A traditional South Indian classical dance known for expressive storytelling and intricate footwork.",
-    image: "/images/sreshtta1.webp"
+      "Bharatanatyam is one of India’s oldest classical dance traditions, originating from Tamil Nadu. It combines powerful footwork, expressive facial gestures (abhinaya), intricate hand mudras, and rhythmic precision. Students develop discipline, posture control, storytelling ability, and stage confidence.",
+    highlights: [
+      "Strong rhythmic foundation",
+      "Expressive storytelling (Abhinaya)",
+      "Temple-inspired movements",
+      "Stage performance training"
+    ],
+    image: "/images/bharatanatyam.jpg"
   },
   {
     id: 2,
@@ -16,8 +22,14 @@ export const danceForms = [
     level: "Beginner to Intermediate",
     duration: "4 Months",
     description:
-      "A North Indian classical dance form focused on spins, rhythm, and graceful movements.",
-    image: "/images/sreshtta1.webp"
+      "Kathak is a North Indian classical dance form known for its graceful spins, intricate footwork, and rhythmic storytelling. The dance emphasizes musicality, coordination, and emotional expression through subtle gestures.",
+    highlights: [
+      "Fast pirouettes (Chakkars)",
+      "Rhythmic foot patterns",
+      "Expressive storytelling",
+      "Graceful hand movements"
+    ],
+    image: "/images/kathak.jpg"
   },
   {
     id: 3,
@@ -26,8 +38,14 @@ export const danceForms = [
     level: "All Levels",
     duration: "3 Months",
     description:
-      "Fluid and expressive dance combining modern techniques with creative freedom.",
-    image: "/images/sreshtta1.webp"
+      "Contemporary dance blends classical, modern, and improvisational techniques. It focuses on fluid transitions, floor work, emotional expression, and creative freedom while building flexibility and core strength.",
+    highlights: [
+      "Fluid body movements",
+      "Creative choreography",
+      "Improvisation training",
+      "Flexibility & strength focus"
+    ],
+    image: "/images/contemporary.jpg"
   },
   {
     id: 4,
@@ -36,8 +54,14 @@ export const danceForms = [
     level: "Beginner to Advanced",
     duration: "6 Months",
     description:
-      "Ancient Indian martial art enhancing flexibility, strength, and discipline.",
-    image: "/images/sreshtta1.webp"
+      "Kalaripayattu is one of the oldest martial art systems in the world. It enhances flexibility, stamina, reflexes, and mental focus. Training includes body conditioning, weapon techniques, and self-defense skills.",
+    highlights: [
+      "Body conditioning exercises",
+      "Weapon training basics",
+      "Flexibility improvement",
+      "Self-defense mastery"
+    ],
+    image: "/images/kalaripayattu.jpg"
   },
   {
     id: 5,
@@ -46,7 +70,13 @@ export const danceForms = [
     level: "Beginner",
     duration: "3 Months",
     description:
-      "High-energy choreography inspired by film industry performances.",
-    image: "/images/sreshtta1.webp"
+      "Cinematic dance focuses on energetic choreography inspired by film and stage performances. Students learn expressions, camera presence, synchronization, and dynamic formations.",
+    highlights: [
+      "High-energy routines",
+      "Film-style choreography",
+      "Group synchronization",
+      "Performance confidence"
+    ],
+    image: "/images/cinematic.jpg"
   }
 ]

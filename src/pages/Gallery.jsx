@@ -1,66 +1,55 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import galleryImages from "../data/galleryData";
-import "../styles/gallery.css";
-import courses from "../data/coursesData";
+import { useState } from "react"
+import { motion } from "framer-motion"
+import { galleryImages } from "../data/gallery"
+import "../styles/gallery.css"
 
-const categories = courses.map(course => course.title);
+function Gallery() {
+  const [category, setCategory] = useState("All")
 
-const Gallery = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedImage, setSelectedImage] = useState(null);
+  const categories = ["All", "Classical", "Modern", "Events"]
 
-  const filteredImages =
-    activeCategory === "All"
+  const filtered =
+    category === "All"
       ? galleryImages
-      : galleryImages.filter(
-          image => image.category === activeCategory
-        );
+      : galleryImages.filter((img) => img.category === category)
 
   return (
-    <div className="gallery-page">
-      <h1 className="gallery-title">Our Performances</h1>
+    <section className="gallery-section">
+      <h2 className="section-title">Our Performances</h2>
 
-      {/* Category Filters */}
+      {/* Filter Buttons */}
       <div className="gallery-filters">
-        {categories.map(category => (
+        {categories.map((cat) => (
           <button
-            key={category}
-            className={activeCategory === category ? "active" : ""}
-            onClick={() => setActiveCategory(category)}
+            key={cat}
+            className={category === cat ? "active" : ""}
+            onClick={() => setCategory(cat)}
           >
-            {category}
+            {cat}
           </button>
         ))}
       </div>
 
       {/* Image Grid */}
       <div className="gallery-grid">
-        {filteredImages.map(image => (
+        {filtered.map((image, index) => (
           <motion.div
             key={image.id}
             className="gallery-card"
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            onClick={() => setSelectedImage(image.image)}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
+            viewport={{ once: true }}
           >
-            <img src={image.image} alt="Dance Performance" />
+            <img src={image.image} alt={image.title} />
+            <div className="overlay">
+              <h3>{image.title}</h3>
+            </div>
           </motion.div>
         ))}
       </div>
+    </section>
+  )
+}
 
-      {/* Lightbox Modal */}
-      {selectedImage && (
-        <div
-          className="lightbox"
-          onClick={() => setSelectedImage(null)}
-        >
-          <img src={selectedImage} alt="Large view" />
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default Gallery;
+export default Gallery
