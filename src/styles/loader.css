@@ -1,6 +1,6 @@
-.loader-container {
+﻿.loader-container {
   height: 100vh;
-  background: black;
+  background: var(--bg-main);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +15,7 @@
 .music-bars span {
   width: 6px;
   height: 40px;
-  background: #00f0ff;
+  background: var(--primary);
   animation: bounce 1s infinite ease-in-out;
 }
 
@@ -31,6 +31,6 @@
 
 .loader-text {
   margin-top: 20px;
-  color: #00f0ff;
-  text-shadow: 0 0 15px #00f0ff;
+  color: var(--primary);
+  text-shadow: 0 0 15px var(--primary);
 }
