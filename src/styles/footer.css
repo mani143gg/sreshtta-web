@@ -1,8 +1,8 @@
-.footer {
-  background: #050510;
-  color: #ccc;
+﻿.footer {
+  background: var(--bg-main);
+  color: var(--text-muted);
   padding: 70px 20px 30px;
-  border-top: 1px solid rgba(0,255,255,0.2);
+  border-top: 1px solid rgba(41, 70, 190, 0.2);
 }
 
 .footer-container {
@@ -15,15 +15,15 @@
 
 /* Logo */
 .footer-logo {
-  color: #00ffff;
+  color: var(--primary);
   font-size: 1.8rem;
-  text-shadow: 0 0 15px #00ffff;
+  text-shadow: 0 0 15px var(--primary);
   margin-bottom: 10px;
 }
 
 /* Headings */
 .footer-col h3 {
-  color: #00ffff;
+  color: var(--primary);
   margin-bottom: 15px;
 }
 
@@ -39,13 +39,13 @@
 
 .footer-col ul li a {
   text-decoration: none;
-  color: #ccc;
+  color: var(--text-muted);
   transition: 0.3s;
 }
 
 .footer-col ul li a:hover {
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
 }
 
 /* Social buttons */
@@ -57,8 +57,8 @@
 
 .social-buttons a {
   text-decoration: none;
-  color: #00ffff;
-  border: 1px solid rgba(0,255,255,0.4);
+  color: var(--primary);
+  border: 1px solid var(--primary-glow);
   padding: 8px 12px;
   border-radius: 20px;
   transition: 0.3s;
@@ -66,9 +66,9 @@
 }
 
 .social-buttons a:hover {
-  background: #00ffff;
-  color: #000;
-  box-shadow: 0 0 20px #00ffff;
+  background: var(--primary);
+  color: var(--text-main);
+  box-shadow: 0 0 20px var(--primary);
 }
 
 /* Bottom section */
@@ -76,8 +76,8 @@
   text-align: center;
   margin-top: 40px;
   font-size: 0.85rem;
-  color: #777;
-  border-top: 1px solid rgba(0,255,255,0.1);
+  color: var(--text-muted);
+  border-top: 1px solid rgba(41, 70, 190, 0.1);
   padding-top: 20px;
 }
 

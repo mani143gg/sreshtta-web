@@ -1,6 +1,6 @@
-.about-page {
-  background: #000;
-  color: white;
+﻿.about-page {
+  background: var(--bg-main);
+  color: var(--text-main);
   padding-top: 100px;
 }
 
@@ -8,19 +8,19 @@
 .about-hero {
   text-align: center;
   padding: 80px 20px;
-  background: radial-gradient(circle at center, #001f2f, #000);
+  background: radial-gradient(circle at center, var(--bg-section), var(--bg-main));
 }
 
 .about-hero h1 {
   font-size: 3rem;
-  color: #00f0ff;
-  text-shadow: 0 0 20px #00f0ff;
+  color: var(--primary);
+  text-shadow: 0 0 20px var(--primary);
 }
 
 .about-hero p {
   margin-top: 20px;
   font-size: 1.2rem;
-  color: #ccc;
+  color: var(--text-muted);
 }
 
 /* Sections */
@@ -32,7 +32,7 @@
 }
 
 .about-section h2 {
-  color: #00f0ff;
+  color: var(--primary);
   margin-bottom: 20px;
 }
 
@@ -50,16 +50,16 @@
 
 /* Glassmorphism */
 .glass-card {
-  backdrop-filter: blur(15px);
-  background: rgba(0, 240, 255, 0.05);
-  border: 1px solid rgba(0, 240, 255, 0.3);
+  backdrop-filter: var(--blur-glass);
+  background: var(--bg-card);
+  border: 1px solid rgba(41, 70, 190, 0.3);
   padding: 30px;
   border-radius: 20px;
   transition: 0.4s ease;
 }
 
 .glass-card:hover {
-  box-shadow: 0 0 25px #00f0ff;
+  box-shadow: 0 0 25px var(--primary);
   transform: translateY(-5px);
 }
 
@@ -78,18 +78,18 @@
   content: "✔";
   position: absolute;
   left: 0;
-  color: #00f0ff;
+  color: var(--primary);
 }
 
 /* CTA */
 .about-cta {
   text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(135deg, #001f2f, #000);
+  background: linear-gradient(135deg, var(--bg-section), var(--bg-main));
 }
 
 .about-cta h2 {
-  color: #00f0ff;
+  color: var(--primary);
   margin-bottom: 20px;
 }
 
@@ -107,7 +107,7 @@
 
 .teachers-section {
   padding: 100px 10%;
-  background: #050a15;
+  background: var(--bg-section);
   text-align: center;
 }
 
@@ -121,14 +121,14 @@
 .teacher-card {
   padding: 25px;
   border-radius: 18px;
-  backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: var(--blur-glass);
+  background: var(--bg-card);
   transition: all 0.4s ease;
 }
 
 .teacher-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 25px var(--primary-glow);
 }
 
 .teacher-image {
@@ -137,7 +137,7 @@
   margin: 0 auto 20px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid cyan;
+  border: 3px solid var(--primary);
 }
 
 .teacher-image img {
@@ -153,26 +153,26 @@
 
 .teacher-specialty {
   display: block;
-  color: cyan;
+  color: var(--primary);
   font-weight: 600;
 }
 
 .teacher-exp {
   display: block;
-  color: #aaa;
+  color: var(--text-muted);
   font-size: 14px;
   margin-bottom: 15px;
 }
 
 .teacher-card p {
   font-size: 14px;
-  color: #ccc;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
 .awards-section {
   padding: 100px 10%;
-  background: linear-gradient(to bottom, #050a15, #000);
+  background: linear-gradient(to bottom, var(--bg-section), var(--bg-main));
   text-align: center;
 }
 
@@ -186,14 +186,14 @@
 .award-card {
   padding: 30px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(15px);
+  background: var(--bg-card);
+  backdrop-filter: var(--blur-glass);
   transition: 0.4s ease;
 }
 
 .award-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 30px rgba(0,255,255,0.4);
+  box-shadow: 0 0 30px var(--primary-glow);
 }
 
 .award-icon {
@@ -207,13 +207,13 @@
 }
 
 .award-card p {
-  color: #aaa;
+  color: var(--text-muted);
 }
 
 .award-card span {
   display: block;
   margin-top: 10px;
-  color: cyan;
+  color: var(--primary);
   font-weight: bold;
 }
 
@@ -229,14 +229,14 @@
 .cert-card {
   padding: 20px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
+  background: var(--bg-card);
+  backdrop-filter: var(--blur-glass);
   transition: 0.4s ease;
 }
 
 .cert-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0,255,255,0.4);
+  box-shadow: 0 0 25px var(--primary-glow);
 }
 
 .cert-card img {
@@ -247,12 +247,12 @@
 }
 
 .cert-card p {
-  color: #ccc;
+  color: var(--text-muted);
   font-size: 14px;
 }
 .timeline-section {
   padding: 100px 10%;
-  background: #050a15;
+  background: var(--bg-section);
   text-align: center;
 }
 
@@ -268,17 +268,17 @@
 .timeline-content {
   padding: 25px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(15px);
+  background: var(--bg-card);
+  backdrop-filter: var(--blur-glass);
   transition: 0.4s ease;
 }
 
 .timeline-content:hover {
-  box-shadow: 0 0 25px rgba(0,255,255,0.4);
+  box-shadow: 0 0 25px var(--primary-glow);
 }
 
 .timeline-content h3 {
-  color: cyan;
+  color: var(--primary);
   margin-bottom: 5px;
 }
 
@@ -288,6 +288,6 @@
 }
 
 .timeline-content p {
-  color: #ccc;
+  color: var(--text-muted);
   font-size: 14px;
 }

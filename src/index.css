@@ -11,4 +11,45 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Brand Colors */
+  --primary: #2946be;
+  --primary-light: #3a5ad4;
+  --primary-dark: #1e3490;
+  --primary-glow: rgba(41, 70, 190, 0.6);
+
+  /* Backgrounds */
+  --bg-main: #060a1a;
+  --bg-section: #0c1333;
+  --bg-card: rgba(255, 255, 255, 0.06);
+
+  /* Text */
+  --text-main: #ffffff;
+  --text-muted: #cfcfcf;
+  --text-soft: #8da4ff;
+
+  /* Effects */
+  --blur-glass: blur(14px);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
 }
